@@ -19,7 +19,7 @@ class Logger {
     }
 }
 
-public class LoggerTest {
+ class LoggerTest {
     public static void main(String[] args) {
         Logger logger1 = Logger.getInstance();
         Logger loggerAgain = Logger.getInstance();
