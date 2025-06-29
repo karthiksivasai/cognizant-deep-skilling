@@ -85,6 +85,12 @@ You need these tables:
 
 3. Test them out - the procedures will run automatically at the end of the script.
 
+## Example Output
+
+![PLSQL_Exercises-3 Output](PLSQL_Exercises-3_output.png)
+
+The screenshot shows the execution results of all three stored procedures in action.
+
 ## Sample Data
 
 The setup creates:
