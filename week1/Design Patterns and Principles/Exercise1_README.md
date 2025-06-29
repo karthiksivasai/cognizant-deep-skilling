@@ -1,26 +1,40 @@
-# Singleton Pattern Example: Logger
+# Singleton Pattern - Logger Example
 
-This project shows a simple example of the Singleton design pattern in Java.
+This is my implementation of the Singleton pattern using a Logger class.
 
-What is in the code?
+## What it does
 
-Logger class: This class uses the Singleton pattern. It means only one Logger object can ever exist. You get the Logger by calling `Logger.getInstance()`. It has a `log(String message)` method to print messages. When the Logger is created, it prints a message to show it was made.
+The Logger class makes sure only one instance exists. No matter how many times you call `getInstance()`, you always get the same object.
 
-LoggerTest class: This class has the `main` method. It gets the Logger instance twice, logs two different messages, and checks if both Logger objects are actually the same (they should be!).
+**Logger class**: 
+- Has a private constructor so you can't create new instances directly
+- Uses `getInstance()` method to get the single instance
+- Has a `log()` method to print messages
 
-How to Run
-1. Compile the code:
-   ```sh
-   javac LoggerTest.java
-   ```
-2. Run the program:
-   ```sh
-   java LoggerTest
-   ```
+**LoggerTest class**: 
+- Tests the singleton by getting the logger twice
+- Checks if both references point to the same object
+- Logs some messages to show it works
 
-Example Output
+## Running the code
+
+Compile:
+```sh
+javac LoggerTest.java
+```
+
+Run:
+```sh
+java LoggerTest
+```
+
+## What you'll see
 
 ![Example Output](output.png)
 
-- The first two lines are the log messages.
-- The last line tells you if both Logger instances are the same (they should be, because of the Singleton pattern).
+The output shows:
+- Logger creation message
+- Two log messages
+- Confirmation that both logger instances are the same object
+
+This proves the Singleton pattern is working correctly.

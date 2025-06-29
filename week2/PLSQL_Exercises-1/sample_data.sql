@@ -1,3 +1,7 @@
+-- Sample Data Setup for Customer Loan Management Exercise
+-- Run this script first to create test data
+
+-- Create sample customers with different ages and balances
 INSERT INTO Customers (customer_id, age, balance, current_loan_rate, IsVIP) 
 VALUES (101, 65, 8500, 8.5, 'FALSE');
 
@@ -19,6 +23,7 @@ VALUES (106, 28, 8000, 8.0, 'FALSE');
 INSERT INTO Customers (customer_id, age, balance, current_loan_rate, IsVIP) 
 VALUES (107, 61, 18000, 6.8, 'FALSE');
 
+-- Create sample loans with various due dates
 INSERT INTO Loans (loan_id, customer_id, due_date) 
 VALUES (1001, 101, SYSDATE + 15);
 

@@ -1,38 +1,29 @@
--- PL/SQL Block for Customer and Loan Management
--- This script handles customer interest rate updates, VIP status changes, and loan reminders
-
 DECLARE
-    -- Variables for customer processing
     v_customer_id NUMBER;
     v_customer_age NUMBER;
     v_customer_balance NUMBER;
     v_current_rate NUMBER;
     
-    -- Variables for loan processing
     v_loan_id NUMBER;
     v_loan_customer_id NUMBER;
     v_due_date DATE;
     
-    -- Cursor for customers over 60 years old
     CURSOR c_senior_customers IS
         SELECT customer_id, age, current_loan_rate
         FROM Customers
         WHERE age > 60;
     
-    -- Cursor for customers with high balance
     CURSOR c_high_balance_customers IS
         SELECT customer_id, balance
         FROM Customers
         WHERE balance > 10000;
     
-    -- Cursor for loans due in next 30 days
     CURSOR c_upcoming_loans IS
         SELECT loan_id, customer_id, due_date
         FROM Loans
         WHERE due_date BETWEEN SYSDATE AND SYSDATE + 30;
 
 BEGIN
-    -- Process senior customers for interest rate reduction
     DBMS_OUTPUT.PUT_LINE('Processing senior customers for interest rate reduction...');
     
     OPEN c_senior_customers;
@@ -40,7 +31,6 @@ BEGIN
         FETCH c_senior_customers INTO v_customer_id, v_customer_age, v_current_rate;
         EXIT WHEN c_senior_customers%NOTFOUND;
         
-        -- Reduce interest rate by 1%
         v_current_rate := v_current_rate - 1;
         
         UPDATE Customers
@@ -53,7 +43,6 @@ BEGIN
     END LOOP;
     CLOSE c_senior_customers;
     
-    -- Process customers for VIP status update
     DBMS_OUTPUT.PUT_LINE('Processing customers for VIP status update...');
     
     OPEN c_high_balance_customers;
@@ -61,7 +50,6 @@ BEGIN
         FETCH c_high_balance_customers INTO v_customer_id, v_customer_balance;
         EXIT WHEN c_high_balance_customers%NOTFOUND;
         
-        -- Update VIP status to TRUE
         UPDATE Customers
         SET IsVIP = 'TRUE'
         WHERE customer_id = v_customer_id;
@@ -72,7 +60,6 @@ BEGIN
     END LOOP;
     CLOSE c_high_balance_customers;
     
-    -- Process upcoming loan reminders
     DBMS_OUTPUT.PUT_LINE('Processing loan reminders for next 30 days...');
     
     OPEN c_upcoming_loans;
@@ -80,14 +67,12 @@ BEGIN
         FETCH c_upcoming_loans INTO v_loan_id, v_loan_customer_id, v_due_date;
         EXIT WHEN c_upcoming_loans%NOTFOUND;
         
-        -- Print reminder message
         DBMS_OUTPUT.PUT_LINE('REMINDER: Customer ID ' || v_loan_customer_id || 
                            ' has Loan ID ' || v_loan_id || 
                            ' due on ' || TO_CHAR(v_due_date, 'DD-MON-YYYY'));
     END LOOP;
     CLOSE c_upcoming_loans;
     
-    -- Commit all changes
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('All updates completed successfully.');
     
@@ -96,4 +81,3 @@ EXCEPTION
         ROLLBACK;
         DBMS_OUTPUT.PUT_LINE('Error occurred: ' || SQLERRM);
 END;
-/ 

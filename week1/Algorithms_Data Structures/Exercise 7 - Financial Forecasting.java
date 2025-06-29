@@ -20,9 +20,4 @@ class FinancialForecastTest {
     }
 }
 
-/*
-Time Complexity:
-- The forecast() method is O(n) because it makes one recursive call for each year.
-- Recursion can sometimes do the same calculation many times (redundant work).
-- To make it faster, you can use memoization (store results) or use a simple loop (iteration).
-*/ 
+ 

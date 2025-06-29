@@ -19,7 +19,6 @@ class Product {
 }
 
 class SearchAlgorithms {
-    // Linear search: O(n) time complexity
     public static int linearSearch(Product[] arr, String name) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].getProductName().equals(name)) {
@@ -29,7 +28,6 @@ class SearchAlgorithms {
         return -1;
     }
 
-    // Binary search: O(log n) time complexity
     public static int binarySearch(Product[] arr, String name) {
         int left = 0, right = arr.length - 1;
         while (left <= right) {

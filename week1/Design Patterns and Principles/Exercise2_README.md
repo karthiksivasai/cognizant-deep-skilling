@@ -1,35 +1,44 @@
-# Exercise 2: Factory Method Pattern
+# Factory Method Pattern - Document Creator
 
+This shows how to use the Factory Method pattern to create different types of documents.
 
-What's in the code?
+## How it works
 
-The code creates a system for making different kinds of documents (`Word`, `PDF`, `Excel`).
+Instead of creating documents directly, I use factories to make them. Each factory knows how to create one specific type of document.
 
-- `Document` interface: A simple interface that says all documents must have an `open()` method.
-- Concrete Documents: `WordDocument`, `PdfDocument`, and `ExcelDocument` are the actual classes that implement the `Document` interface.
-- `DocumentFactory` (Abstract Creator): An abstract class that declares the factory method `createDocument()`. It acts as a blueprint for other factories.
-- Concrete Factories: `WordDocumentFactory`, `PdfDocumentFactory`, and `ExcelDocumentFactory` are the actual factories. Each one knows how to create a specific type of document.
-- `DocumentFactoryTest`: A test class with a `main` method to show how to use the factories to create and open documents.
+**Document interface**: Just says all documents need an `open()` method
 
-How to Run
+**Concrete Documents**: 
+- WordDocument, PdfDocument, ExcelDocument
+- Each one prints a different message when opened
 
-1.  Compile the code
-    ```sh
-    javac "Design Patterns and Principles/DocumentFactoryTest.java"
-    ```
+**Factories**:
+- DocumentFactory (abstract base class)
+- WordDocumentFactory, PdfDocumentFactory, ExcelDocumentFactory
+- Each factory creates its specific document type
 
-2.  Run the program
-    ```sh
-    java -cp "Design Patterns and Principles" DocumentFactoryTest
-    ```
+**Test class**: Shows how to use each factory to create and open documents
 
-Expected Output
+## Running it
+
+Compile:
+```sh
+javac "Design Patterns and Principles/DocumentFactoryTest.java"
+```
+
+Run:
+```sh
+java -cp "Design Patterns and Principles" DocumentFactoryTest
+```
+
+## Output
+
 ```
 Opening Word document...
 Opening PDF document...
 Opening Excel document...
 ```
 
-Example Output Screenshot:
+![Factory Method Pattern Output](output2.png)
 
-![Factory Method Pattern Output](output2.png) 
+The pattern lets you add new document types easily without changing existing code. 

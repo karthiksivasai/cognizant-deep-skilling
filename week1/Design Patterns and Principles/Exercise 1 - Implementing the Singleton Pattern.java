@@ -1,5 +1,3 @@
-// Logger class for single object creation
-// Singleton pattern applied here
 class Logger {
     private static Logger instance;
 

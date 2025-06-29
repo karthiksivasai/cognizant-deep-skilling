@@ -1,30 +1,40 @@
-# Exercise 7: Financial Forecasting with Recursion
+# Financial Forecasting with Recursion
 
-## What is Recursion?
-Recursion is when a method calls itself to solve a problem. It is useful for problems that can be broken down into smaller, similar subproblems. For example, calculating powers, factorials, or traversing tree structures.
+This calculates future investment value using a recursive method.
 
-## What's in this code?
-- A recursive method `forecast()` that predicts future value using the formula:
-  - `futureValue = currentValue × (1 + growthRate)^years`
-- A test class that calls `forecast()` with sample values and prints the result.
+## How recursion works
 
-## How to Run
-1. Compile the code:
-   ```sh
-   javac "week1/Algorithms_Data Structures/Exercise 7 - Financial Forecasting.java"
-   ```
-2. Run the test:
-   ```sh
-   java -cp "week1/Algorithms_Data Structures" FinancialForecastTest
-   ```
+Recursion is when a function calls itself. It's good for problems that can be broken into smaller pieces. Like calculating compound interest - each year builds on the previous year.
 
-## Example Output Screenshot
+## What the code does
+
+**FinancialForecast class**: 
+- `forecast()` method that calls itself to calculate compound growth
+- Each call handles one year, then calls itself for the remaining years
+- Base case: when years = 0, just return the current value
+
+**FinancialForecastTest class**: 
+- Tests the forecast with sample values
+- Shows predicted value after 3 years with 5% growth
+
+## Running it
+
+Compile:
+```sh
+javac "week1/Algorithms_Data Structures/Exercise 7 - Financial Forecasting.java"
+```
+
+Run:
+```sh
+java -cp "week1/Algorithms_Data Structures" FinancialForecastTest
+```
+
+## Output
 
 ![Financial Forecast Output](output.png)
 
-- The output shows the predicted value after a certain number of years.
+Shows the predicted value after compound interest is applied.
 
-## Time Complexity
-- The `forecast()` method is **O(n)** because it makes one recursive call for each year.
-- Recursion can sometimes repeat calculations (redundant work).
-- To optimize, you can use memoization (store results) or use a loop (iteration) instead of recursion. 
+## Performance
+
+The recursive approach is O(n) where n is the number of years. For better performance with large numbers, you could use a simple loop instead of recursion. 

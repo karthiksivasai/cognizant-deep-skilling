@@ -1,31 +1,42 @@
-# Exercise 2: Search Algorithms & Big O Notation
+# Search Algorithms - Linear vs Binary
 
-## What is Big O Notation?
-Big O Notation is a way to describe how fast (or slow) an algorithm is as the input gets bigger. It helps us compare the efficiency of different algorithms. For searching:
-- **Best case:** The item is found right away (first try).
-- **Average case:** The item is found somewhere in the middle.
-- **Worst case:** The item is found last, or not at all (we look at everything).
+This compares two different ways to search for products in an array.
 
-## What's in this code?
-- A `Product` class with id, name, and category.
-- Two search methods:
-  - `linearSearch()` (O(n)): Checks each product one by one.
-  - `binarySearch()` (O(log n)): Works on sorted arrays, splits the search in half each time.
-- A `SearchTest` class to show how both searches work and compare their speed.
+## Big O Notation
 
-## How to Run
-1. Compile the code:
-   ```sh
-   javac "week1/Algorithms_Data Structures/exercise2.java"
-   ```
-2. Run the test:
-   ```sh
-   java -cp "week1/Algorithms_Data Structures" SearchTest
-   ```
+Big O tells you how slow an algorithm gets when you have more data. For searching:
+- **Linear Search (O(n))**: Checks every item one by one
+- **Binary Search (O(log n))**: Only works on sorted arrays, but much faster
 
-## Example Output Screenshot
+## What the code does
+
+**Product class**: Simple class with id, name, and category
+
+**SearchAlgorithms class**: 
+- `linearSearch()` - goes through each product until it finds the right one
+- `binarySearch()` - keeps splitting the array in half to find the product faster
+
+**SearchTest class**: Tests both methods and shows which one is faster
+
+## Running it
+
+Compile:
+```sh
+javac "week1/Algorithms_Data Structures/exercise2.java"
+```
+
+Run:
+```sh
+java -cp "week1/Algorithms_Data Structures" SearchTest
+```
+
+## Results
 
 ![Search Algorithms Output](output.png)
 
-- The output shows the index where the product was found and how long each search took (in nanoseconds).
-- Binary search is usually much faster than linear search for large sorted arrays. 
+The output shows:
+- Which index the product was found at
+- How long each search took (nanoseconds)
+- Binary search is way faster for large datasets
+
+Binary search only works if your data is sorted first, but it's worth it for big arrays. 
