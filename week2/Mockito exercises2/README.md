@@ -68,11 +68,11 @@ The VerifyDemo.java shows verification concepts without Mockito. It creates a fa
 
 ## What I Verified
 
-- ✅`getData()` is called when fetching data
-- ✅ `saveData()` is called with processed input
-- ✅ Both methods called in `fetchAndSave()`
-- ✅ Multiple calls are counted correctly
-- ✅ Arguments passed are exactly what we expect
+- `getData()` is called when fetching data
+-  `saveData()` is called with processed input
+- Both methods called in `fetchAndSave()`
+- Multiple calls are counted correctly
+- Arguments passed are exactly what we expect
 
 This exercise taught me how to make sure my code is calling external dependencies correctly, which is important for testing business logic without depending on real external systems.
 
