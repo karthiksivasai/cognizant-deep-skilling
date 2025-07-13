@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<countries>
+    <country code="IN" name="India"/>
+    <country code="US" name="United States"/>
+    <country code="GB" name="United Kingdom"/>
+    <country code="CA" name="Canada"/>
+    <country code="AU" name="Australia"/>
+    <country code="DE" name="Germany"/>
+    <country code="FR" name="France"/>
+    <country code="JP" name="Japan"/>
+    <country code="CN" name="China"/>
+    <country code="BR" name="Brazil"/>
+</countries> 
