@@ -1,5 +1,0 @@
-com/cognizant/jwt/JwtApplication.class
-com/cognizant/jwt/service/JwtService.class
-com/cognizant/jwt/config/SecurityConfig.class
-com/cognizant/jwt/controller/AuthenticationController.class
-com/cognizant/jwt/model/JwtResponse.class
