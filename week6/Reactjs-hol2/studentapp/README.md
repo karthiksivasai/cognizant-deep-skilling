@@ -89,9 +89,9 @@ The application will display three welcome messages:
 2. "Welcome to the About Page of Student Management Portal"
 3. "Welcome to the Contact Page of Student Management Portal"
 
-![Student Management Portal Output](student-management-output.png)
+![Student Management Portal Output](student-management-portal-output.png)
 
-The screenshot shows the successful rendering of all three components in the browser at localhost:3000, demonstrating the proper functioning of the React class components.
+The screenshot shows the successful rendering of all three components in the browser at localhost:3002, demonstrating the proper functioning of the React class components.
 
 ## Available Scripts
 
