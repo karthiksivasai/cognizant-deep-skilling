@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.App-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.App-header h1 {
+  margin: 0 0 20px 0;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.controls, .render-mode {
+  margin: 15px 0;
+}
+
+.controls h3, .render-mode h3 {
+  margin: 10px 0;
+  color: #ffd700;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Component Styles */
+.st2, .v1, .mystyle1 {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  min-height: 200px;
+}
+
+.st2 h1, .v1 h1, .mystyle1 h1 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.st2 h3, .v1 h3, .mystyle1 h3 {
+  color: #4CAF50;
+  font-size: 1.3rem;
+  margin: 10px 0 5px 0;
+}
+
+.st2 h4, .v1 h4, .mystyle1 h4 {
+  color: #2196F3;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.st2 p, .v1 p, .mystyle1 p {
+  color: #f0f0f0;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul div {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 3px solid #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .st2, .v1, .mystyle1 {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
