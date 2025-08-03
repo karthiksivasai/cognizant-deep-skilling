@@ -123,9 +123,9 @@ The application will display:
 - Blue color for scheduled/completed cohorts
 - Proper spacing and styling
 
-![Cohort Tracker Output](cohort-tracker-output.png)
+![Cohort Tracker Output](cohort-tracker-output-new.png)
 
-The screenshot shows the successful rendering of the CohortDetails component with CSS modules and inline styling. The dashboard displays three cohort cards with conditional color styling - green for ongoing cohorts and blue for scheduled cohorts, demonstrating the implementation of CSS modules and dynamic styling.
+The screenshot shows the successful rendering of the CohortDetails component with CSS modules and inline styling. The dashboard displays three cohort cards with conditional color styling - green for ongoing cohorts and blue for scheduled cohorts, demonstrating the implementation of CSS modules and dynamic styling. The application is running on localhost:3001.
 
 ## Available Scripts
 

@@ -135,14 +135,14 @@ The application will display:
 ### Application Screenshots
 
 #### Home Page
-![Trainers App Home](trainers-app-home.png)
+![Trainers App Home](trainers-app-home-new.png)
 
-The screenshot shows the home page of the Trainers App with the welcome message "Welcome to My Academy trainers page" and navigation links "Home | Show Trainers".
+The screenshot shows the home page of the Trainers App with the welcome message "Welcome to My Academy trainers page" and navigation links "Home | Show Trainers". The application is running on localhost:3001.
 
 #### Trainers List Page
-![Trainers App List](trainers-app-list.png)
+![Trainers App List](trainers-app-list-new.png)
 
-The screenshot shows the trainers list page displaying the three trainer names as clickable links: "Syed Khaleelullah", "Jojo Jose", and "Elisa Jones".
+The screenshot shows the trainers list page displaying the three trainer names as clickable links: "Syed Khaleelullah", "Jojo Jose", and "Elisa Jones". The application is running on localhost:3001.
 
 ## Available Scripts
 

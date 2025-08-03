@@ -97,9 +97,9 @@ The application will display student details with calculated score:
 - **Total**: 284 Marks (dark magenta)
 - **Score**: 94.67% (forest green)
 
-![Score Calculator Output](score-calculator-output.png)
+![Score Calculator Output](score-calculator-output-new.png)
 
-The screenshot shows the successful rendering of the CalculateScore functional component in the browser at localhost, displaying student details with different colored styling and the calculated percentage score.
+The screenshot shows the successful rendering of the CalculateScore functional component in the browser at localhost:3001, displaying student details with different colored styling and the calculated percentage score.
 
 ## Available Scripts
 
